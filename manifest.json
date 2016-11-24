@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Github Pull request Counter",
+  "description": "Github Pull request Counter",
+  "version": "1.0.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["bg.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "webNavigation",
+    "alarms",
+    "storage"
+  ]
+}
