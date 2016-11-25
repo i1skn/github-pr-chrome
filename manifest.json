@@ -1,20 +1,23 @@
 {
   "manifest_version": 2,
 
-  "name": "Github Pull request Counter",
-  "description": "Github Pull request Counter",
+  "name": "Github Pull Requests Checker",
+  "description": "Github Pull Request Checker for Google Chrome",
   "version": "1.0.0",
 
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "img/icon.png"
   },
   "icons": {
-    "128": "icon_128.png"
+    "128": "img/icon_128.png"
   },
-  "options_page": "options.html",
   "background": {
-    "scripts": ["bg.js"],
+    "scripts": ["src/gh.js", "src/service.js"],
     "persistent": false
+  },
+  "options_ui": {
+    "page": "src/options.html",
+    "chrome_style": true
   },
   "permissions": [
     "tabs",
